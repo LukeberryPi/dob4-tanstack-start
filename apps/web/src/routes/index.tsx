@@ -6,31 +6,16 @@ export const Route = createFileRoute("/")({
   component: HomeComponent,
 });
 
-const TITLE_TEXT = `
- ██████╗ ███████╗████████╗████████╗███████╗██████╗
- ██╔══██╗██╔════╝╚══██╔══╝╚══██╔══╝██╔════╝██╔══██╗
- ██████╔╝█████╗     ██║      ██║   █████╗  ██████╔╝
- ██╔══██╗██╔══╝     ██║      ██║   ██╔══╝  ██╔══██╗
- ██████╔╝███████╗   ██║      ██║   ███████╗██║  ██║
- ╚═════╝ ╚══════╝   ╚═╝      ╚═╝   ╚══════╝╚═╝  ╚═╝
-
- ████████╗    ███████╗████████╗ █████╗  ██████╗██╗  ██╗
- ╚══██╔══╝    ██╔════╝╚══██╔══╝██╔══██╗██╔════╝██║ ██╔╝
-    ██║       ███████╗   ██║   ███████║██║     █████╔╝
-    ██║       ╚════██║   ██║   ██╔══██║██║     ██╔═██╗
-    ██║       ███████║   ██║   ██║  ██║╚██████╗██║  ██╗
-    ╚═╝       ╚══════╝   ╚═╝   ╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝
- `;
-
 function HomeComponent() {
-  const trpc = useTRPC();
-  const healthCheck = useQuery(trpc.healthCheck.queryOptions());
+  // const trpc = useTRPC();
+  // const healthCheck = useQuery(trpc.healthCheck.queryOptions());
 
   return (
-    <div className="container mx-auto max-w-3xl px-4 py-2">
-      <pre className="overflow-x-auto font-mono text-sm">{TITLE_TEXT}</pre>
+    <div className="container mx-auto flex justify-center max-w-3xl px-4 py-2">
+      <h1>DOB4</h1>
+      <img src="/todo.png" />
       <div className="grid gap-6">
-        <section className="rounded-lg border p-4">
+        {/* <section className="rounded-lg border p-4">
           <h2 className="mb-2 font-medium">API Status</h2>
           <div className="flex items-center gap-2">
             <div
@@ -44,7 +29,7 @@ function HomeComponent() {
                   : "Disconnected"}
             </span>
           </div>
-        </section>
+        </section> */}
       </div>
     </div>
   );

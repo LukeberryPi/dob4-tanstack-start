@@ -1,17 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300..700&display=swap");
 @import "tailwindcss";
 @import "tw-animate-css";
 
-@custom-variant dark (&:where(.dark, .dark *));
-
 @theme {
-  --font-sans:
-    "Inter", "Geist", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-sans: "Manrope", sans-serif;
 }
+
+@custom-variant dark (&:where(.dark, .dark *));
 
 html,
 body {
-  @apply bg-white dark:bg-gray-950;
+  @apply bg-stone-100 dark:bg-stone-900;
 
   @media (prefers-color-scheme: dark) {
     color-scheme: dark;

@@ -45,6 +45,10 @@ export const Route = createRootRouteWithContext<RouterAppContext>()({
         rel: "stylesheet",
         href: appCss,
       },
+      {
+        rel: "icon",
+        href: "/drawing-book.png",
+      },
     ],
   }),
 });

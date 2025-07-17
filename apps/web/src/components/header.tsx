@@ -6,16 +6,19 @@ export default function Header() {
   const links = [
     { to: "/", label: "Home" },
     { to: "/dashboard", label: "Dashboard" },
-    { to: "/about", label: "About" },
     { to: "/pricing", label: "Pricing" },
     { to: "/downloads", label: "Downloads" },
     { to: "/about", label: "Dashboard" },
   ];
 
   return (
-    <div>
-      <div className="flex flex-row items-center justify-between px-2 py-1">
-        <nav className="flex gap-4 text-lg">
+    <>
+      <header className="flex flex-row items-center justify-between p-4">
+        <a className="flex items-center gap-2">
+          <img src="/todo.png" width="40" height="40" />
+          <span>DOB4</span>
+        </a>
+        <nav className="flex gap-4 rounded-md">
           {links.map(({ to, label }) => {
             return (
               <Link key={to} to={to}>
@@ -27,8 +30,7 @@ export default function Header() {
         <div className="flex items-center gap-2">
           <UserMenu />
         </div>
-      </div>
-      <hr />
-    </div>
+      </header>
+    </>
   );
 }
